@@ -30,6 +30,7 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>libgcc</Dependency>
+            <Dependency>dbus</Dependency>
             <Dependency version="4.16.9">sip</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -63,6 +64,8 @@
             <Dependency release="current">python-qt5-common</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>python3-sip</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>qt5-webkit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/pyuic5-python</Path>
