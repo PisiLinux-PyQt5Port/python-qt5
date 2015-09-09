@@ -16,6 +16,8 @@
         <Archive sha1sum="6de6e23692069dbb934f4decdf86133e54a0cd54" type="targz">http://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.5/PyQt-gpl-5.5.tar.gz</Archive> 
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-sensors-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
             <Dependency version="4.16.9">sip-devel</Dependency>
             <Dependency>python3</Dependency>
             <Dependency>dbus-python3</Dependency>
@@ -40,6 +42,7 @@
             <Path fileType="data">/usr/share/qt5/qsci</Path>
             <Path fileType="library">/usr/lib/qt5/plugins/designer</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/sip/PyQt5</Path>
         </Files>
     </Package>
 
@@ -66,11 +69,12 @@
             <Dependency>python3-sip</Dependency>
             <Dependency>dbus</Dependency>
             <Dependency>qt5-webkit</Dependency>
+            <Dependency>qt5-sensors</Dependency>
+            <Dependency>qt5-declarative</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/pyuic5-python</Path>
             <Path fileType="library">/usr/lib/python3*</Path>
-            <Path fileType="data">/usr/share/sip/PyQt5</Path>
         </Files>
     </Package>
 
