@@ -63,7 +63,7 @@ def install():
     autotools.rawInstall("DESTDIR=%(DESTDIR)s INSTALL_ROOT=%(DESTDIR)s" % {'DESTDIR':get.installDIR()})
     shelltools.cd("%s/Py2Qt-gpl-5.5" % get.workDIR())
     autotools.rawInstall("DESTDIR=%(DESTDIR)s INSTALL_ROOT=%(DESTDIR)s" % {'DESTDIR':get.installDIR()})
-    pisitools.rename("/usr/bin/pyuic5", "pyuic5-python")
+    #pisitools.rename("/usr/bin/pyuic5", "pyuic5-python")
     
     pisitools.dohtml("doc/html/*")
     
