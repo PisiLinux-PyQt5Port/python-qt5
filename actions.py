@@ -19,6 +19,14 @@ def setup():
                                      --assume-shared \
                                      --no-timestamp \
                                      --qsci-api \
+                                     --enable=QtDBus \
+                                     --enable=QtQml \
+                                     --enable=QtQuick \
+                                     --enable=QtQuickWidgets \
+                                     --enable=QtOpenGL \
+                                     --enable=QtTest \
+                                     --enable=QtSql \
+                                     --enable=QtSensors \
                                      --enable=QtCore \
                                      --enable=QtWidgets \
                                      --enable=QtWebKitWidgets \
@@ -26,6 +34,7 @@ def setup():
                                      --enable=QtGui \
                                      --enable=QtNetwork \
                                      --enable=QtWebKit \
+                                     --enable=QtPrintSupport \
                                      --sip /usr/bin/sip \
                                      --qmake='/usr/lib/qt5/bin/qmake' \
                                      --destdir='/usr/lib/python3.4/site-packages' \
@@ -37,6 +46,14 @@ def setup():
                                      --assume-shared \
                                      --no-timestamp \
                                      --qsci-api \
+                                     --enable=QtDBus \
+                                     --enable=QtQml \
+                                     --enable=QtQuick \
+                                     --enable=QtQuickWidgets \
+                                     --enable=QtOpenGL \
+                                     --enable=QtTest \
+                                     --enable=QtSql \
+                                     --enable=QtSensors \
                                      --enable=QtCore \
                                      --enable=QtWidgets \
                                      --enable=QtWebKitWidgets \
@@ -44,6 +61,7 @@ def setup():
                                      --enable=QtGui \
                                      --enable=QtNetwork \
                                      --enable=QtWebKit \
+                                     --enable=QtPrintSupport \
                                      --destdir='/usr/lib/python2.7/site-packages' \
                                      --sip-incdir='/usr/include/python2.7' \
                                      --sip /usr/bin/sip \
@@ -58,11 +76,12 @@ def build():
 
 def install():
   
-    autotools.rawInstall("-C pyrcc DESTDIR=%(DESTDIR)s INSTALL_ROOT=%(DESTDIR)s" % {'DESTDIR':get.installDIR()})
-    autotools.rawInstall("-C pylupdate DESTDIR=%(DESTDIR)s INSTALL_ROOT=%(DESTDIR)s" % {'DESTDIR':get.installDIR()})
     autotools.rawInstall("DESTDIR=%(DESTDIR)s INSTALL_ROOT=%(DESTDIR)s" % {'DESTDIR':get.installDIR()})
+    
     shelltools.cd("%s/Py2Qt-gpl-5.5" % get.workDIR())
     autotools.rawInstall("DESTDIR=%(DESTDIR)s INSTALL_ROOT=%(DESTDIR)s" % {'DESTDIR':get.installDIR()})
+    autotools.rawInstall("-C pyrcc DESTDIR=%(DESTDIR)s INSTALL_ROOT=%(DESTDIR)s" % {'DESTDIR':get.installDIR()})
+    autotools.rawInstall("-C pylupdate DESTDIR=%(DESTDIR)s INSTALL_ROOT=%(DESTDIR)s" % {'DESTDIR':get.installDIR()})
     #pisitools.rename("/usr/bin/pyuic5", "pyuic5-python")
     
     pisitools.dohtml("doc/html/*")
