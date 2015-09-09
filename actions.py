@@ -35,6 +35,7 @@ def setup():
                                      --enable=QtNetwork \
                                      --enable=QtWebKit \
                                      --enable=QtPrintSupport \
+                                     --enable=QtX11Extras \
                                      --sip /usr/bin/sip \
                                      --qmake='/usr/lib/qt5/bin/qmake' \
                                      --destdir='/usr/lib/python3.4/site-packages' \
@@ -62,6 +63,7 @@ def setup():
                                      --enable=QtNetwork \
                                      --enable=QtWebKit \
                                      --enable=QtPrintSupport \
+                                     --enable=QtX11Extras \
                                      --destdir='/usr/lib/python2.7/site-packages' \
                                      --sip-incdir='/usr/include/python2.7' \
                                      --sip /usr/bin/sip \

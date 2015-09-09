@@ -18,6 +18,7 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-sensors-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
             <Dependency version="4.16.9">sip-devel</Dependency>
             <Dependency>python3</Dependency>
             <Dependency>dbus-python3</Dependency>
@@ -33,6 +34,7 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>dbus</Dependency>
+            <Dependency>python</Dependency>
             <Dependency version="4.16.9">sip</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -52,6 +54,7 @@
             <Dependency release="current">python-qt5-common</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>sip</Dependency>
+            <Dependency>python-sip</Dependency>
             <Dependency>dbus</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -68,9 +71,11 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>python3-sip</Dependency>
             <Dependency>dbus</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>qt5-webkit</Dependency>
             <Dependency>qt5-sensors</Dependency>
             <Dependency>qt5-declarative</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/pyuic5-python</Path>
